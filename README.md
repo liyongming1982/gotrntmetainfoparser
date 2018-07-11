@@ -5,8 +5,17 @@ Torrent metafile parser written in Go lang.
 
 Usage
 ====================
-* `MetaInfo::ReadTorrentMetaInfoFile(<file>)` parses `.torrent` metainfo file and stores result in MetaInfo structure.
-* `MetaInfo::DumpTorrentMetaInfo()` prints `.torrent` metainfo file content in text format.
+package main
+import "fmt"
+import "github.com/swatkat/gotrntmetainfoparser"
+
+
+func main() {
+    fmt.Println("hello pear")
+    metaInfo := new(gotrntmetainfoparser.MetaInfo)
+    metaInfo.ReadTorrentMetaInfoFile("NEWIFI_MT7621_OPENWRT_075.tar.gz.torrent")
+    metaInfo.DumpTorrentMetaInfo()
+}
 
 Installation
 ====================
